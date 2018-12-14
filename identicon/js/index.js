@@ -7,7 +7,9 @@ new Vue({
   },
   // derived data elements
   computed:{
-
+    identicon() {
+      return jdenticon.toSvg(this.inputText, 200 /* 200 pixels */);
+    }
   },
   // methods invoked form component to mutate data and perform side effects
   methods: {
