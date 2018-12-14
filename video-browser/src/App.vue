@@ -1,13 +1,18 @@
 <template>
   <!-- Can only have one top-level element in template tag -->
   <div>
-    Hello World
+    <SearchBar></SearchBar>
   </div>
 </template>
 
 <script>
+  import SearchBar from './components/SearchBar';
+
   export default {
-    name: 'app'
+    name: 'app',
+    components: {
+      SearchBar
+    }
   };
 </script>
 
