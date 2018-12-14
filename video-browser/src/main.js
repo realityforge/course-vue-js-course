@@ -4,6 +4,9 @@ import App from './App.vue';
 
 Vue.config.productionTip = false;
 
-new Vue({
+const vue = new Vue({
   render: h => h(App)
-}).$mount('#app');
+});
+
+// This is actually required to bind it to html template
+vue.$mount('#app');
