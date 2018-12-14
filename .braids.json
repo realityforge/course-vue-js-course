@@ -1,0 +1,10 @@
+{
+  "config_version": 1,
+  "mirrors": {
+    "vendor/VueCasts": {
+      "url": "https://github.com/StephenGrider/VueCasts.git",
+      "branch": "master",
+      "revision": "6c33ebdbe619fb712adf8196f5b6bdd0b5e1425a"
+    }
+  }
+}
