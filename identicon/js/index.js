@@ -8,7 +8,7 @@ new Vue({
       Input
       <input @input="onInput" :value="inputText"/>
     </div>
-  
+
     <div>
       Output
       <!-- v-html inserts bound property as raw unescaped html -->
