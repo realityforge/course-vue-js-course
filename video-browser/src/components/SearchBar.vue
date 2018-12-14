@@ -8,8 +8,7 @@
     name: 'SearchBar',
     methods: {
       onInput(event) {
-        // eslint-disable-next-line
-        console.log(event.target.value);
+        this.$emit('searchTermChanged', event.target.value);
       }
     }
   };

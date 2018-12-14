@@ -1,7 +1,7 @@
 <template>
   <!-- Can only have one top-level element in template tag -->
   <div>
-    <SearchBar></SearchBar>
+    <SearchBar @searchTermChanged="onSearchTermChanged"></SearchBar>
   </div>
 </template>
 
@@ -12,6 +12,12 @@
     name: 'app',
     components: {
       SearchBar
+    },
+    methods: {
+      onSearchTermChanged(searchTerm) {
+        // eslint-disable-next-line
+        console.log(searchTerm);
+      }
     }
   };
 </script>
