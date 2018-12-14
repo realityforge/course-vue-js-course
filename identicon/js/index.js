@@ -1,3 +1,11 @@
 new Vue({
-  el: '#root'
+  el: '#root',
+  data: {
+    inputText: ''
+  },
+  methods: {
+    onInput(event) {
+      this.inputText = event.target.value;
+    }
+  }
 });
