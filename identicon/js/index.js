@@ -5,6 +5,10 @@ new Vue({
   data: {
     inputText: ''
   },
+  // derived data elements
+  computed:{
+
+  },
   // methods invoked form component to mutate data and perform side effects
   methods: {
     onInput(event) {
