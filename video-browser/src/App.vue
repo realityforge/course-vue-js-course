@@ -9,6 +9,7 @@
   import SearchBar from './components/SearchBar';
 
   // Account created via https://console.developers.google.com
+  // Described at https://developers.google.com/youtube/v3/
   const YOUTUBE_API_KEY = 'AIzaSyBFU5xoFyIF62AgJ-FQmMJnvH3muid9xr0';
 
   export default {
