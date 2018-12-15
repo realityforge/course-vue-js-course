@@ -8,6 +8,9 @@
 <script>
   import SearchBar from './components/SearchBar';
 
+  // Account created via https://console.developers.google.com
+  const YOUTUBE_API_KEY = 'AIzaSyBFU5xoFyIF62AgJ-FQmMJnvH3muid9xr0';
+
   export default {
     name: 'app',
     components: {
