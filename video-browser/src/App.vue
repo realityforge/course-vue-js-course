@@ -6,6 +6,7 @@
 </template>
 
 <script>
+  import axios from 'axios';
   import SearchBar from './components/SearchBar';
 
   // Account created via https://console.developers.google.com
@@ -19,8 +20,9 @@
     },
     methods: {
       onSearchTermChanged(searchTerm) {
-        // eslint-disable-next-line
-        console.log(searchTerm);
+        axios.get('https://www.googleapis.com/youtube/v3/search',
+          { params: { key: YOUTUBE_API_KEY, type: 'video', part: 'snippet', q: searchTerm } }
+        ).then(response => console.log(response));
       }
     }
   };
