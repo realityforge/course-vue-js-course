@@ -2,7 +2,7 @@
   <div>
     <h4>Video List</h4>
     <ul class="list-group">
-      <VideoListItem v-for="video of videos" :video="video" :key="video.etag"></VideoListItem>
+      <VideoListItem v-for="video of videos" :video="video" :key="video.etag" @videoSelect="onVideoSelect"></VideoListItem>
     </ul>
   </div>
 </template>
@@ -18,6 +18,11 @@
     },
     components: {
       VideoListItem
+    },
+    methods: {
+      onVideoSelect(v) {
+        this.$emit('videoSelect', v);
+      }
     }
   };
 </script>
