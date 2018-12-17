@@ -2,7 +2,7 @@
   <div>
     <h4>Video List</h4>
     <ul>
-      <VideoListItem v-for="video of videos" :video="video"></VideoListItem>
+      <VideoListItem v-for="video of videos" :video="video" :key="video.etag"></VideoListItem>
     </ul>
   </div>
 </template>
