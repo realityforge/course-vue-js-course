@@ -2,6 +2,7 @@
   <!-- Can only have one top-level element in template tag -->
   <div class="container">
     <SearchBar @searchTermChanged="onSearchTermChanged"></SearchBar>
+    <VideoDetail :video="selectedVideo"></VideoDetail>
     <VideoList :videos="videos" @videoSelect="onVideoSelect"></VideoList>
   </div>
 </template>
@@ -9,6 +10,7 @@
 <script>
   import axios from 'axios';
   import SearchBar from './components/SearchBar';
+  import VideoDetail from './components/VideoDetail';
   import VideoList from './components/VideoList';
 
   // Account created via https://console.developers.google.com
@@ -18,15 +20,16 @@
   export default {
     name: 'app',
     components: {
+      VideoDetail,
       SearchBar,
       VideoList
     },
     data() {
-      return { videos: [] };
+      return { videos: [], selectedVideo: null };
     },
     methods: {
       onVideoSelect(video) {
-        console.log(video);
+        this.selectedVideo = video;
       },
       onSearchTermChanged(searchTerm) {
         axios.get('https://www.googleapis.com/youtube/v3/search',
