@@ -13,4 +13,15 @@
     }
   };
 </script>
-<style></style>
+
+<!-- scoped means it only impacts this components html -->
+<style scoped>
+  input {
+    width: 75%;
+  }
+
+  div {
+    text-align: center;
+    margin: 20px;
+  }
+</style>

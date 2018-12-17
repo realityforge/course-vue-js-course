@@ -1,6 +1,6 @@
 <template>
   <!-- Can only have one top-level element in template tag -->
-  <div>
+  <div class="container">
     <SearchBar @searchTermChanged="onSearchTermChanged"></SearchBar>
     <VideoList :videos="videos"></VideoList>
   </div>
