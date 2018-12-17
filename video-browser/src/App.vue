@@ -21,11 +21,14 @@
       SearchBar,
       VideoList
     },
+    data() {
+      return { videos: [] };
+    },
     methods: {
       onSearchTermChanged(searchTerm) {
         axios.get('https://www.googleapis.com/youtube/v3/search',
           { params: { key: YOUTUBE_API_KEY, type: 'video', part: 'snippet', q: searchTerm } }
-        ).then(response => console.log(response));
+        ).then(response => this.videos = response.data.items);
       }
     }
   };
