@@ -2,7 +2,7 @@
   <!-- Can only have one top-level element in template tag -->
   <div>
     <SearchBar @searchTermChanged="onSearchTermChanged"></SearchBar>
-    <VideoList></VideoList>
+    <VideoList :videos="videos"></VideoList>
   </div>
 </template>
 
