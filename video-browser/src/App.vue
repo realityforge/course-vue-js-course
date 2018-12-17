@@ -2,8 +2,10 @@
   <!-- Can only have one top-level element in template tag -->
   <div class="container">
     <SearchBar @searchTermChanged="onSearchTermChanged"></SearchBar>
-    <VideoDetail :video="selectedVideo"></VideoDetail>
-    <VideoList :videos="videos" @videoSelect="onVideoSelect"></VideoList>
+    <div class="row">
+      <VideoDetail :video="selectedVideo"></VideoDetail>
+      <VideoList :videos="videos" @videoSelect="onVideoSelect"></VideoList>
+    </div>
   </div>
 </template>
 

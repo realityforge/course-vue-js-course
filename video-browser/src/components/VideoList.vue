@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="col-md-4">
     <h4>Video List</h4>
     <ul class="list-group">
       <VideoListItem v-for="video of videos" :video="video" :key="video.etag" @videoSelect="onVideoSelect"></VideoListItem>
