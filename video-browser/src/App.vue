@@ -2,12 +2,14 @@
   <!-- Can only have one top-level element in template tag -->
   <div>
     <SearchBar @searchTermChanged="onSearchTermChanged"></SearchBar>
+    <VideoList></VideoList>
   </div>
 </template>
 
 <script>
   import axios from 'axios';
   import SearchBar from './components/SearchBar';
+  import VideoList from './components/VideoList';
 
   // Account created via https://console.developers.google.com
   // Described at https://developers.google.com/youtube/v3/
@@ -16,7 +18,8 @@
   export default {
     name: 'app',
     components: {
-      SearchBar
+      SearchBar,
+      VideoList
     },
     methods: {
       onSearchTermChanged(searchTerm) {
