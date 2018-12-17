@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4>Video List</h4>
-    <ul>
+    <ul class="list-group">
       <VideoListItem v-for="video of videos" :video="video" :key="video.etag"></VideoListItem>
     </ul>
   </div>

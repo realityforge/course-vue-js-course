@@ -1,5 +1,5 @@
 <template>
-  <li>{{video.snippet.title}}</li>
+  <li class="list-group-item"><img :alt="video.snippet.title" :src="video.snippet.thumbnails.default.url"/> {{video.snippet.title}}</li>
 </template>
 <script>
   export default {
