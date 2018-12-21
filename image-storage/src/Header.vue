@@ -1,11 +1,13 @@
 <template>
-  <section class="header">
-    <div class="logo">Image Storage</div>
-    <div class="header-controls">
-      <a v-if="!authenticated" href="">Login</a>
-      <a v-if="authenticated" href="">Gallery</a>
-      <a v-if="authenticated" href="">upload</a>
-      <a v-if="authenticated" href="">Logout</a>
+  <section class="ui secondary pointing menu">
+    <a href="" class="active item">Image Storage</a>
+    <div class="right menu">
+      <a v-if="!authenticated" href="" class="ui item">Login</a>
+      <div v-if="authenticated" class="horizontal">
+        <a href="" class="item">Galleries</a>
+        <a href="" class="item">Upload</a>
+        <a href="" class="item">Logout</a>
+      </div>
     </div>
   </section>
 </template>
@@ -18,15 +20,3 @@
     }
   };
 </script>
-
-<style scoped>
-  .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-
-  .logo {
-  }
-</style>
