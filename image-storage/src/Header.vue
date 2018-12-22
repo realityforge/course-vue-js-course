@@ -20,3 +20,10 @@
     }
   };
 </script>
+
+<style scoped>
+.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+</style>
