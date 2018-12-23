@@ -22,8 +22,8 @@
 </script>
 
 <style scoped>
-.horizontal {
-  display: flex;
-  flex-direction: row;
-}
+  .horizontal {
+    display: flex;
+    flex-direction: row;
+  }
 </style>
