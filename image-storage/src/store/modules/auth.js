@@ -1,3 +1,5 @@
+import api from '../../api/imgur';
+
 const state = {
   token: null
 };
@@ -13,6 +15,9 @@ const mutations = {
 };
 
 const actions = {
+  login: () => {
+    api.login();
+  },
   logout: ({ commit }) => {
     // Commit's first parameter is the string that matches mutation key and
     // contains as many parameters as you want following. In this case we are
