@@ -1,3 +1,4 @@
+import axios from 'axios';
 import qs from 'qs';
 
 const IMGUR_CLIENT_ID = '11821b8778e97c4';
@@ -14,5 +15,12 @@ export default {
       response_type: 'token'
     };
     window.location = `${ROOT_URL}/oauth2/authorize?${qs.stringify(queryString)}`;
+  },
+  fetchImages(token) {
+    return axios.get(`${ROOT_URL}/3/account/me/images`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
   }
 };
