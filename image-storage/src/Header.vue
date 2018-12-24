@@ -2,8 +2,8 @@
   <section class="ui secondary pointing menu">
     <a href="" class="active item">Image Storage</a>
     <div class="right menu">
-      <a v-if="!authenticated" href="#" @click="login" class="ui item">Login</a>
-      <div v-if="authenticated" class="horizontal">
+      <a v-if="!isAuthenticated" href="#" @click="login" class="ui item">Login</a>
+      <div v-if="isAuthenticated" class="horizontal">
         <a href="" class="item">Galleries</a>
         <a href="" class="item">Upload</a>
         <a href="#" class="item" @click="logout">Logout</a>
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-  import {mapActions} from 'vuex';
+  import {mapActions, mapGetters} from 'vuex';
 
   export default {
     name: 'Header',
-    data() {
-      return { authenticated: false };
+    computed: {
+      ...mapGetters(['isAuthenticated'])
     },
     methods: {
       ...mapActions(['login', 'logout'])
