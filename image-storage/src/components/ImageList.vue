@@ -1,5 +1,7 @@
 <template>
-  <div>ImageList - {{allImages.length}}</div>
+  <div>
+    <img v-for="image of allImages" :src="image.link" width="200px" />
+  </div>
 </template>
 
 <script>
