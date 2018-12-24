@@ -1,3 +1,4 @@
+import qs from 'qs';
 import api from '../../api/imgur';
 
 const state = {
@@ -17,6 +18,11 @@ const mutations = {
 const actions = {
   login: () => {
     api.login();
+  },
+  loginComplete: ({ commit }, hash) => {
+    const queryString = qs.parse(hash.replace('#', ''));
+    let accessToken = queryString.access_token;
+    commit('setToken', accessToken);
   },
   logout: ({ commit }) => {
     // Commit's first parameter is the string that matches mutation key and
