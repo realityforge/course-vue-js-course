@@ -9,7 +9,7 @@ Vue.config.productionTip = false;
 // Enable router plugin
 Vue.use(VueRouter);
 
-const router = new VueRouter({
+export const router = new VueRouter({
   // This history is browser based history rather than hash based
   // this is needed to enable oauth integration
   mode: 'history',

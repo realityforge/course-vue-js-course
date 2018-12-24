@@ -1,5 +1,6 @@
 import qs from 'qs';
 import api from '../../api/imgur';
+import {router} from '../../main';
 
 const state = {
   token: window.localStorage.getItem('imgur.access_token')
@@ -24,6 +25,7 @@ const actions = {
     let accessToken = queryString.access_token;
     commit('setToken', accessToken);
     window.localStorage.setItem('imgur.access_token', accessToken);
+    router.push('/');
   },
   logout: ({ commit }) => {
     // Commit's first parameter is the string that matches mutation key and
