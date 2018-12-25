@@ -1,6 +1,11 @@
 <template>
-  <div class="image-container">
-    <img v-for="image of allImages" :src="image.link"/>
+  <div>
+    <div v-if="isAuthenticated" class="image-container">
+      <img v-for="image of allImages" :src="image.link"/>
+    </div>
+    <div v-else="!isAuthenticated">
+      Log in to get started.
+    </div>
   </div>
 </template>
 
@@ -13,7 +18,7 @@
       this.fetchImages();
     },
     computed: {
-      ...mapGetters(['allImages'])
+      ...mapGetters(['allImages', 'isAuthenticated'])
     },
     methods: {
       ...mapActions(['fetchImages'])
