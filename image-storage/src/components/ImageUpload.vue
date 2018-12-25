@@ -6,8 +6,13 @@
 </template>
 
 <script>
+  import {mapActions} from 'vuex';
+
   export default {
-    name: 'ImageUpload'
+    name: 'ImageUpload',
+    methods: {
+      ...mapActions(['uploadImages'])
+    }
   };
 </script>
 
