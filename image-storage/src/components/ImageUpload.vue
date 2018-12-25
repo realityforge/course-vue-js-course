@@ -1,6 +1,6 @@
 <template>
   <div class="dropper">
-    <input type="file">
+    <input type="file" @change="uploadImages($event.target.files)" multiple accept="image/*">
     <span>Drop file here.</span>
   </div>
 </template>
